@@ -6,16 +6,17 @@
   body {
     background: #02006A;
     background: linear-gradient(#4F005B, #02006A);
-    
+    background-size: cover;
     height: 100vh;
     font-family: 'Jura', sans-serif;
+    background-repeat: no-repeat;
   }
   
   header{
     font-family: 'Jura', sans-serif;
     height: 150px;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./Assets/Img/3255741.jpg);
-    
+    background-size: cover;
     
   }
   
@@ -110,30 +111,62 @@
         padding-left: 30px;
     }
     
+    .list_header {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+  
+      }
+      
+      .accueil { grid-area: 1 / 1 / 2 / 2; }
+      .projets { grid-area: 1 / 2 / 2 / 3; }
+      .contacts { grid-area: 1 / 3 / 2 / 4; }
+      .API { grid-area: 1 / 4 / 2 / 5; }
+  
+  
     .list_header{
-        width: 200px;
-        margin-left: 50%;
+        width: 500px;
+        margin-left: -100px;
+        
         font-size: 100%;
+        display: flex;
+        flex-direction: row;
+        
     }
   
     .accueil{
         height: 30px;
+        width: 60px;
         padding-top: 2px;
+        margin-left: 15px;
+        margin-top: -10px;
+        
     }
   
     .projets{
         height: 30px;
+        width: 60px;
         padding-top: 2px;
+        margin-left: 15px;
+        margin-top: -10px;
     }
   
     .contact{
         height: 30px;
+        width: 60px;
         padding-top: 2px;
+        margin-left: 15px;
+        margin-top: -10px;
     }
   
     .API{
         height: 30px;
+        width: 60px;
         padding-top: 2px;
+        margin-left: 15px;
+        margin-top: -10px;
     }
   }
 
@@ -145,4 +178,15 @@
     background-color: #7400649c;
     box-shadow: #800294;
     box-shadow: 0px 0px 4px 4px #800294;
+  }
+
+  @media screen and (max-width: 800px) {
+    .box_proj_1{
+      width: 250px;
+      height: 350px;
+    }
+
+    .box_proj_1 img{
+      margin-left: -30px;
+    }
   }
